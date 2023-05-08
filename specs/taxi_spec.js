@@ -26,7 +26,7 @@ describe('Taxi', function() {
         assert.strictEqual(actual, 'Dave' ); 
     });
 
-    describe('passengers', function() {
+    describe('passengers', function() { //mocha functions
         it('should start with no passengers', function() {
             const actual = taxi.passengers;
             assert.deepStrictEqual(actual, []);
@@ -46,13 +46,31 @@ describe('Taxi', function() {
         it('should be able to remove a specific passenger', function () {
             taxi.addPassenger('Camilla');
             taxi.addPassenger('Charles');
-
             taxi.removePassengerByName('Charles');
-
             const expected = ['Camilla']
             const actual = taxi.passengers;
             assert.deepStrictEqual(actual, expected)
         });
+
+
+
+        it('should be able to remove all passengers from the taxi', function () {
+            taxi.addPassenger('Camilla');
+            taxi.addPassenger('Charles');
+            taxi.removeAllPassengersFromTaxi();
+            const expected = []
+            const actual = []
+            assert.deepStrictEqual(actual, expected)
+        });
+
+        // alterntave way to execute:
+        it('should be able to remove all passengers', function () {
+            taxi.addPassenger('Mike');
+            taxi.addPassenger('Lucas');
+            taxi.removeAllPassengers();
+            const actual = taxi.numberOfPassengers();
+            assert.strictEqual(actual, 0);
+          });
 
     });
 });

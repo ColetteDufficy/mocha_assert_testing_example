@@ -20,4 +20,21 @@ Taxi.prototype.removePassengerByName = function ( passenger) {
 }
 
 
+
+Taxi.prototype.removeAllPassengersFromTaxi = function () {
+        while (this.passengers.length > 0){
+            this.passengers.pop()
+            } 
+}
+
+// alterntave way to execute:
+Taxi.prototype.removeAllPassengers = function () {
+    this.passengers.splice(0, this.numberOfPassengers());
+  }
+
+
+
+
+
+
 module.exports = Taxi;
