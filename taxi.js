@@ -5,4 +5,19 @@ const Taxi = function(manufacturer, model, driver){
     this.passengers = [];
 }
 
+Taxi.prototype.numberOfPassengers = function () {
+    return this.passengers.length;
+}
+
+Taxi.prototype.addPassenger = function (passenger) {
+    this.passengers.push(passenger)
+    return this.passengers.length;
+}
+
+Taxi.prototype.removePassengerByName = function ( passenger) {
+    const indexOfPassenger = this.passengers.indexOf(passenger);
+    this.passengers.splice(indexOfPassenger, 1);
+}
+
+
 module.exports = Taxi;
