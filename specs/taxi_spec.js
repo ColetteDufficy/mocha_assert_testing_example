@@ -5,7 +5,7 @@ const Taxi = require('../taxi.js')
 describe('Taxi', function() {
     let taxi;
 
-    beforeEach(function() {                //mocha hook, so it deosnt require a string
+    beforeEach(function() {   //mocha hook, whixch deosnt require a string as a first parameter
         taxi = new Taxi('Toyota', 'Prius', 'Dave');
     }); 
 
