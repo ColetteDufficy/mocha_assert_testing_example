@@ -26,7 +26,7 @@ describe('Taxi', function() {
         assert.strictEqual(actual, 'Dave' ); 
     });
 
-    describe('passengers', function() { //mocha functions
+    describe('Passengers', function() { //mocha functions
         it('should start with no passengers', function() {
             const actual = taxi.passengers;
             assert.deepStrictEqual(actual, []);
