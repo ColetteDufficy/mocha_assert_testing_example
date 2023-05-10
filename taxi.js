@@ -25,6 +25,9 @@ Taxi.prototype.removeAllPassengersFromTaxi = function () {
         while (this.passengers.length > 0){
             this.passengers.pop()
             } 
+
+    // this.passengers = []
+    // this.passengers.length = 0
 }
 
 // alterntave way to execute:
