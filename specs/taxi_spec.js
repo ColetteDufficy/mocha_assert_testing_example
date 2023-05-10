@@ -59,7 +59,7 @@ describe('Taxi', function() {
             taxi.addPassenger('Charles');
             taxi.removeAllPassengersFromTaxi();
             const expected = []
-            const actual = []
+            const actual = taxi.passengers
             assert.deepStrictEqual(actual, expected)
         });
 
